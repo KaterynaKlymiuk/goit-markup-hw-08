@@ -1,0 +1,71 @@
+.features__list {
+    display: inline-flex;
+    justify-content: space-between;
+
+    padding-left: 0;
+}
+
+.features__tittle {
+    color: $headingColor;
+
+    margin: 0;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.4;
+
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.features__content {
+    margin-top: 10px;
+    margin-bottom: 0;
+
+    font-size: 14px;
+    line-height: 1.71;
+
+    letter-spacing: 0.03em;
+
+    text-align: left;
+}
+
+.features__item {
+    width: 270px;
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        height: 120px;
+        width: 270px;
+
+        margin-bottom: 30px;
+        margin-top: 94px;
+    }
+}
+
+// $featuresImgs: "attantion", "punctuality", "planning", "technologies";
+
+// @each $img in $featureaImgs {
+// background-image: url(../imges/#{$featuresImags}.png);
+// }
+
+.attantion::before {
+    background-image: url(../imges/attantion.png);
+}
+
+.punctuality::before {
+    background-image: url(../imges/punctuality.png);
+}
+
+.planning::before {
+    background-image: url(../imges/planning.png);
+}
+
+.technologies::before {
+    background-image: url(../imges/technologies.png);
+}
