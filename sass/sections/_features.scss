@@ -1,8 +1,18 @@
 .features__list {
+    display: block;
+    margin-top: 60px;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    @media screen and (min-width: 768px) {
     display: inline-flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    }
 
-    padding-left: 0;
+    @media screen and (min-width: 1600px) {
+    flex-wrap: nowrap;
+                }
 }
 
 .features__tittle {
@@ -31,20 +41,41 @@
 }
 
 .features__item {
-    width: 270px;
+
+width: 100%;
 
     &:not(:last-child) {
-        margin-right: 30px;
-    }
+            margin-bottom: 30px;
+        }
 
     &::before {
         content: "";
         display: block;
         height: 120px;
-        width: 270px;
+        width: 100%;
 
         margin-bottom: 30px;
-        margin-top: 94px;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 354px;
+
+       &:nth-last-child(2) {
+        margin-bottom: 0;
+       }
+
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 270px;
+            
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
     }
 }
 
@@ -55,17 +86,33 @@
 // }
 
 .attantion::before {
+    background-color: #F5F4FA;
     background-image: url(../imges/attantion.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .punctuality::before {
-    background-image: url(../imges/punctuality.png);
+    background-color: #F5F4FA;
+    background-image: url(../imges/punctuality.png);     
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .planning::before {
+    background-color: #F5F4FA;
     background-image: url(../imges/planning.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .technologies::before {
+    background-color: #F5F4FA;
     background-image: url(../imges/technologies.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }

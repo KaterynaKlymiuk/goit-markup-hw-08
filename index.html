@@ -20,8 +20,20 @@
 <!-- Шапка -->
 
 <header class="header container">
+            <a href="./index.html" class="logo logo--dark"><span>Web</span>Studio</a>
+    <div class="menu">
+        <button class="menu__btn" 
+        aria-label="Перемикач мобільного меню"
+        aria-expanded="false"
+        aria-controls="menu__container"
+        data-menu-button>
+            <svg width="40" height="40">
+                <use class="icon-menu" href="./imges/sprite.svg#menu"></use>
+                <use class="icon-cross" href="./imges/sprite.svg#menu_to_close"></use>
+            </svg>
+        </button>
+            <div class="menu__container" id="menu__container" data-menu>
     <nav class="navigation">
-        <a href="./index.html" class="logo logo--dark"><span>Web</span>Studio</a>
         <ul class="navigation__list">
             <li class="navigation__item"><a href="./index.html" class="navigation__link navigation__link--active">Студія</a></li>
             <li class="navigation__item"><a href="./portfolio.html" class="navigation__link">Портфоліо</a></li>
@@ -42,6 +54,15 @@
             +38 096 111 11 11
         </a></li>
     </ul>
+
+    <ul class="studio-messengers">
+        <li class="studio-messengers__item"><a class="studio-messengers__link" href="">Instagram</a></li>
+        <li class="studio-messengers__item"><a class="studio-messengers__link" href="">Twitter</a></li>
+        <li class="studio-messengers__item"><a class="studio-messengers__link" href="">Facebook</a></li>
+        <li class="studio-messengers__item"><a class="studio-messengers__link" href="">LinkedIn</a></li>
+    </ul>
+            </div>
+    </div>  
 </header>
 
 <main>
@@ -102,6 +123,7 @@
 </section>
 
 <!-- Наша команда -->
+
 <section class="team">
     <div class="container">
     <h2 class="team__tittle">Наша команда</h2>
@@ -446,5 +468,23 @@
             }
         })();
 </script>
+
+<script>
+    (() => {
+            const menuBtnRef = document.querySelector("[data-menu-button]");
+            const mobileMenuRef = document.querySelector("[data-menu]");
+
+            menuBtnRef.addEventListener("click", () => {
+                const expanded =
+                    menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+
+                menuBtnRef.classList.toggle("is-open");
+                menuBtnRef.setAttribute("aria-expanded", !expanded);
+
+                mobileMenuRef.classList.toggle("is-open");
+            });
+        })();
+</script>
+
 </body>
 </html>

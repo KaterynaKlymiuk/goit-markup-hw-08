@@ -1,3 +1,9 @@
+@media screen and (max-width: 1599px) {
+    .working {
+        display: none;
+        }
+}
+
 .working {
     padding: 94px 0;
 }
@@ -17,6 +23,7 @@
 
 .working__list {
     padding-left: 0;
+    margin: 0;
     display: inline-flex;
     justify-content: space-between;
 }
