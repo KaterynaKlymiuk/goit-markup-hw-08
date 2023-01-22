@@ -1,172 +1,166 @@
 .team {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: $lightBackground;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $lightBackground;
 
-        @media screen and (min-width: 1600px) {
-        padding-top: 94px;
-        padding-bottom: 94px;
-            }
+  @media screen and (min-width: 1600px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .team__tittle {
-    margin: 0;
-    margin-bottom: 30px;
+  margin: 0;
+  margin-bottom: 30px;
 
-    font-size: 28px;
+  font-size: 28px;
+  line-height: 1.17;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $headingColor;
+
+  @media screen and (min-width: 1600px) {
+    margin-bottom: 50px;
+
+    font-size: 36px;
     line-height: 1.17;
-
-    text-align: center;
-    letter-spacing: 0.03em;
-
-    color: $headingColor;
-
-    @media screen and (min-width: 1600px) {
-        margin-bottom: 50px;
-
-        font-size: 36px;
-        line-height: 1.17;
-    }
+  }
 }
 
 .team__set {
+  margin: 0;
+  padding: 0;
 
-        margin: 0;
-        padding: 0;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
-    @media screen and (min-width: 768px) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    @media screen and (min-width: 1600px) {
-        flex-wrap: wrap;
-    }
-    
+  @media screen and (min-width: 1600px) {
+    flex-wrap: wrap;
+  }
 }
 
 .team__thumb {
-    
-    height: 622px;
-    width: 450px;
+  height: 622px;
+  width: 450px;
 
-    background-color: #fff;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
-        &:not(:last-child) {
-                margin-bottom: 30px;
-            }
+  background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-@media  (min-width: 768px) {
-        height: 536px;
-        width: 354px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: 768px) {
+    height: 536px;
+    width: 354px;
 
     &:nth-last-child(2) {
-            margin-bottom: 0;
-        }
-}
+      margin-bottom: 0;
+    }
+  }
 
-@media (min-width: 1600px) {
+  @media (min-width: 1600px) {
     &:nth-last-child(n) {
-            margin-bottom: 0;
-        }
-    
+      margin-bottom: 0;
+    }
+
     margin: 0;
 
     height: 428px;
     width: 270px;
-}
-
+  }
 }
 
 .team__img {
+  width: 450px;
+  height: 460px;
 
-    width: 450px;
-    height: 460px;
+  display: block;
 
-    display: block;
+  object-fit: cover;
+  object-position: center;
 
-    object-fit: cover;
-    object-position: center;
+  @media (min-width: 768px) {
+    width: 354px;
+    height: 374px;
+  }
 
-    @media (min-width: 768px) {
-        width: 354px;
-        height: 374px;
-    }
-
-    @media (min-width: 1600px) {
-        width: 270px;
-        height: 260px;
-    }
+  @media (min-width: 1600px) {
+    width: 270px;
+    height: 260px;
+  }
 }
 
 .team__name {
-    margin-top: 30px;
+  margin-top: 30px;
 
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
 
-    text-align: center;
-    letter-spacing: 0.03em;
+  text-align: center;
+  letter-spacing: 0.03em;
 
-    color: $headingColor;
+  color: $headingColor;
 }
 
 .team__position {
-    margin-top: 10px;
+  margin-top: 10px;
 
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.19;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
 
-    text-align: center;
-    letter-spacing: 0.03em;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 
 .messengers {
-    display: flex;
-    padding: 0 122px;
-    width: 100%;
+  display: flex;
+  padding: 0 122px;
+  width: 100%;
 
-    justify-content: space-between;
+  justify-content: space-between;
 
-@media screen and (min-width: 768px) {
-        padding: 0 74px;
-    }
+  @media screen and (min-width: 768px) {
+    padding: 0 74px;
+  }
 
-@media screen and (min-width: 1600px) {
-        padding: 0 32px;
-    }
-
+  @media screen and (min-width: 1600px) {
+    padding: 0 32px;
+  }
 }
 
 .messengers__item {
-    width: 44px;
-    height: 44px;
+  width: 44px;
+  height: 44px;
 }
 
 .messengers__link {
-    display: flex;
-    width: 44px;
-    height: 44px;
+  display: flex;
+  width: 44px;
+  height: 44px;
 
-    border-radius: 50%;
+  border-radius: 50%;
 
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 
-    color: $contentColor;
-    fill: currentColor;
+  color: $contentColor;
+  fill: currentColor;
 
-    &:hover {
-        background-color: $interactiveColor;
-        fill: #fff;
-    }
+  &:hover {
+    background-color: $interactiveColor;
+    fill: #fff;
+  }
 }
 
 .messengers__icon {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }

@@ -1,268 +1,462 @@
 <!DOCTYPE html>
 <html lang="UK">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Веб Студія</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-        integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/main.min.css">
-</head>
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
 
-<script>
-    (() => {
+  <body>
+    <!-- Шапка -->
+
+    <header class="header container">
+      <a href="./index.html" class="logo logo--dark"><span>Web</span>Studio</a>
+      <div class="menu">
+        <button
+          class="menu__btn"
+          aria-label="Перемикач мобільного меню"
+          aria-expanded="false"
+          aria-controls="menu__container"
+          data-menu-button
+        >
+          <svg width="40" height="40">
+            <use class="icon-menu" href="./imges/sprite.svg#menu"></use>
+            <use
+              class="icon-cross"
+              href="./imges/sprite.svg#menu_to_close"
+            ></use>
+          </svg>
+        </button>
+        <div class="menu__container" id="menu__container" data-menu>
+          <nav class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="./index.html" class="navigation__link">Студія</a>
+              </li>
+              <li class="navigation__item">
+                <a
+                  href="./portfolio.html"
+                  class="navigation__link navigation__link--active"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a href="./contacts.html" class="navigation__link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="studio-contacts">
+            <li class="studio-contacts__item">
+              <a href="mailto:info@devstudio.com" class="studio-contacts__link">
+                <svg class="studio-contacts__icon mail">
+                  <use href="./imges/sprite.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="studio-contacts__item">
+              <a href="telto:+380961111111" class="studio-contacts__link">
+                <svg class="studio-contacts__icon tel">
+                  <use href="./imges/sprite.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
+          </ul>
+
+          <ul class="studio-messengers">
+            <li class="studio-messengers__item">
+              <a class="studio-messengers__link" href="">Instagram</a>
+            </li>
+            <li class="studio-messengers__item">
+              <a class="studio-messengers__link" href="">Twitter</a>
+            </li>
+            <li class="studio-messengers__item">
+              <a class="studio-messengers__link" href="">Facebook</a>
+            </li>
+            <li class="studio-messengers__item">
+              <a class="studio-messengers__link" href="">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="portfolio container">
+        <h1 class="portfolio__tittle">Портфоліо</h1>
+        <ul class="portfolio__filter filter">
+          <li class="filter__item">
+            <input
+              id="all"
+              class="filter__input"
+              name="filter-item"
+              type="radio"
+              value="all"
+            />
+            <label for="all" class="filter__btn">Усі</label>
+          </li>
+          <li class="filter__item">
+            <input
+              id="webs"
+              class="filter__input"
+              name="filter-item"
+              type="radio"
+              value="webs"
+            />
+            <label for="webs" class="filter__btn">Веб-сайти</label>
+          </li>
+          <li class="filter__item">
+            <input
+              id="applications"
+              class="filter__input"
+              name="filter-item"
+              type="radio"
+              value="applications"
+            />
+            <label for="applications" class="filter__btn">Додатки</label>
+          </li>
+          <li class="filter__item">
+            <input
+              id="design"
+              class="filter__input"
+              name="filter-item"
+              type="radio"
+              value="design"
+            />
+            <label for="design" class="filter__btn">Дизайн</label>
+          </li>
+          <li class="filter__item">
+            <input
+              id="marketing"
+              class="filter__input"
+              name="filter-item"
+              type="radio"
+              value="marketing"
+            />
+            <label for="marketing" class="filter__btn">Маркетинг</label>
+          </li>
+        </ul>
+
+        <ul class="portfolio__set">
+          <li class="portfolio__item project">
+            <div class="hidden-thumb">
+              <img
+                class="project__img"
+                src="./imges/technokryak.jpg"
+                width="370"
+                alt="Ноутбук з зображенням відкритої сторінки веб-сайту Технокряк"
+              />
+              <p class="project__description">
+                Ресурс пропонує комплексні пропозиції з різним рівнем
+                функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+            <h2 class="project__tittle">Технокряк</h2>
+            <p class="project__class">Веб-сайт</p>
+          </li>
+          <li class="portfolio__item project">
+            <div class="hidden-thumb">
+              <img
+                class="project__img"
+                src="./imges/neworlean.jpg"
+                width="370"
+                alt="Постер New Orlean vs Golden Star"
+              />
+              <p class="project__description">
+                Ресурс пропонує комплексні пропозиції з різним рівнем
+                функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+            <h2 class="project__tittle">Постер New Orlean vs Golden Star</h2>
+            <p class="project__class">Дизайн</p>
+          </li>
+          <li class="portfolio__item project">
+            <div class="hidden-thumb">
+              <img
+                class="project__img"
+                src="./imges/seafood.jpg"
+                width="370"
+                alt="Емблема ресторану Seafood"
+              />
+              <p class="project__description">
+                Ресурс пропонує комплексні пропозиції з різним рівнем
+                функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+            <h2 class="project__tittle">Ресторан Seafood</h2>
+            <p class="project__class">Додаток</p>
+          </li>
+          <li class="portfolio__item project">
+            <div class="hidden-thumb">
+              <img
+                class="project__img"
+                src="./imges/prime.jpg"
+                width="370"
+                alt="Зображення з накладними навушниками"
+              />
+              <p class="project__description">
+                Ресурс пропонує комплексні пропозиції з різним рівнем
+                функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+            <h2 class="project__tittle">Проєкт Prime</h2>
+            <p class="project__class">Маркетинг</p>
+          </li>
+          <li class="portfolio__item project">
+            <div class="hidden-thumb">
+              <img
+                class="project__img"
+                src="./imges/boxes.jpg"
+                width="370"
+                alt="Зображення з двома коробками"
+              />
+              <p class="project__description">
+                Ресурс пропонує комплексні пропозиції з різним рівнем
+                функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                вичерпні відомості про компанію чи приватну особу.
+              </p>
+            </div>
+            <h2 class="project__tittle">Проєкт Boxes</h2>
+            <p class="project__class">Додаток</p>
+          </li>
+          <li class="portfolio__item project">
+            <div class="hidden-thumb">
+              <img
+                class="project__img"
+                src="./imges/inspiration.jpg"
+                width="370"
+                alt="Монітор із зображенням відкритої сторінки веб-сайту Inspiration has no Borders"
+              />
+              <p class="project__description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Commodi hic tenetur necessitatibus earum rem sequi, accusamus,
+                placeat totam harum magni repellat? Dignissimos officiis sit ab
+                autem accusantium officia ipsa quasi?
+              </p>
+            </div>
+            <h2 class="project__tittle">Inspiration has no Borders</h2>
+            <p class="project__class">Веб-сайт</p>
+          </li>
+          <li class="portfolio__item project">
+            <div class="hidden-thumb">
+              <img
+                class="project__img"
+                src="./imges/limitededition.jpg"
+                width="370"
+                alt="Зображення розгорнутої книги"
+              />
+              <p class="project__description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Commodi hic tenetur necessitatibus earum rem sequi, accusamus,
+                placeat totam harum magni repellat? Dignissimos officiis sit ab
+                autem accusantium officia ipsa quasi?
+              </p>
+            </div>
+            <h2 class="project__tittle">Видання Limited Edition</h2>
+            <p class="project__class">Дизайн</p>
+          </li>
+          <li class="portfolio__item project">
+            <div class="hidden-thumb">
+              <img
+                class="project__img"
+                src="./imges/lab.jpg"
+                width="370"
+                alt="Емблема LAB"
+              />
+              <p class="project__description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Commodi hic tenetur necessitatibus earum rem sequi, accusamus,
+                placeat totam harum magni repellat? Dignissimos officiis sit ab
+                autem accusantium officia ipsa quasi?
+              </p>
+            </div>
+            <h2 class="project__tittle">Проєкт LAB</h2>
+            <p class="project__class">Маркетинг</p>
+          </li>
+          <li class="portfolio__item project">
+            <div class="hidden-thumb">
+              <img
+                class="project__img"
+                src="./imges/growingbusiness.jpg"
+                width="370"
+                alt="Ноутбук з зображенням відкритого додатку Growing Business"
+              />
+              <p class="project__description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Commodi hic tenetur necessitatibus earum rem sequi, accusamus,
+                placeat totam harum magni repellat? Dignissimos officiis sit ab
+                autem accusantium officia ipsa quasi?
+              </p>
+            </div>
+            <h2 class="project__tittle">Growing Business</h2>
+            <p class="project__class">Додаток</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Підвал -->
+
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="contacts-tablet">
+          <div class="contacts">
+            <a href="./index.html" class="logo logo--light"
+              ><span>Web</span>Studio</a
+            >
+            <address>
+              <ul class="contacts__set">
+                <li class="contact__item">
+                  <a
+                    class="contact__link adress"
+                    href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                  >
+                    м. Київ, пр-т Лесі Украінки, 26
+                  </a>
+                </li>
+                <li class="contact__item">
+                  <a href="mailto:info@devstudio.com" class="contact__link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="contact__item">
+                  <a href="telto:+380961111111" class="contact__link"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <div class="invitation">
+            <h3 class="invitation__tittle footer-tittles">Приєднуйтесь</h3>
+            <ul class="messengers invitation__messengers">
+              <li class="messengers__item">
+                <a
+                  href="/"
+                  class="messengers__link invitation__link"
+                  aria-label="Інстаграм"
+                >
+                  <svg class="messengers__icon">
+                    <use
+                      xlink:href="./imges/sprite.svg#instagram"
+                      width="20"
+                      height="20"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="messengers__item">
+                <a
+                  href="/"
+                  class="messengers__link invitation__link"
+                  aria-label="Твітер"
+                >
+                  <svg class="messengers__icon">
+                    <use
+                      xlink:href="./imges/sprite.svg#twitter"
+                      width="20"
+                      height="20"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="messengers__item">
+                <a
+                  href="/"
+                  class="messengers__link invitation__link"
+                  aria-label="Фейсбук"
+                >
+                  <svg class="messengers__icon">
+                    <use
+                      xlink:href="./imges/sprite.svg#facebook"
+                      width="20"
+                      height="20"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="messengers__item">
+                <a
+                  href="/"
+                  class="messengers__link invitation__link"
+                  aria-label="Лінкедін"
+                >
+                  <svg class="messengers__icon">
+                    <use
+                      xlink:href="./imges/sprite.svg#linkedin"
+                      width="20"
+                      height="20"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sighn-up">
+          <h3 class="sighn-up__tittle footer-tittles">
+            Підпишіться на розсилку
+          </h3>
+
+          <div class="sighn-up__form">
+            <label class="sighn-up__lable">
+              <input
+                class="sighn-up__input"
+                type="email"
+                placeholder="E-mail"
+              />
+            </label>
+            <button type="submit" class="sighn-up__button">
+              Підписатися
+              <svg class="sighn-up__icon">
+                <use href="./imges/sprite.svg#paper-plane"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (() => {
         const menuBtnRef = document.querySelector("[data-menu-button]");
         const mobileMenuRef = document.querySelector("[data-menu]");
 
         menuBtnRef.addEventListener("click", () => {
-            const expanded =
-                menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+          const expanded =
+            menuBtnRef.getAttribute("aria-expanded") === "true" || false;
 
-            menuBtnRef.classList.toggle("is-open");
-            menuBtnRef.setAttribute("aria-expanded", !expanded);
+          menuBtnRef.classList.toggle("is-open");
+          menuBtnRef.setAttribute("aria-expanded", !expanded);
 
-            mobileMenuRef.classList.toggle("is-open");
+          mobileMenuRef.classList.toggle("is-open");
         });
-    })();
-</script>
-
-<body>
-    
-    <!-- Шапка -->
-    
-    <header class="header container">
-        <nav class="navigation">
-            <a href="./index.html" class="logo logo--dark"><span>Web</span>Studio</a>
-            <ul class="navigation__list">
-                <li class="navigation__item"><a href="./index.html"
-                        class="navigation__link navigation__link--active">Студія</a></li>
-                <li class="navigation__item"><a href="./portfolio.html" class="navigation__link">Портфоліо</a></li>
-                <li class="navigation__item"><a href="./contacts.html" class="navigation__link">Контакти</a></li>
-            </ul>
-        </nav>
-    
-        <ul class="studio-contacts">
-            <li class="studio-contacts__item"><a href="mailto:info@devstudio.com" class="studio-contacts__link">
-                    <svg class="studio-contacts__icon mail">
-                        <use href="./imges/sprite.svg#envelope"></use>
-                    </svg>
-                    info@devstudio.com</a></li>
-            <li class="studio-contacts__item"><a href="telto:+380961111111" class="studio-contacts__link">
-                    <svg class="studio-contacts__icon tel">
-                        <use href="./imges/sprite.svg#smartphone"></use>
-                    </svg>
-                    +38 096 111 11 11
-                </a></li>
-        </ul>
-    </header>
-
-    <main>
-        <section class="portfolio container">
-            <h1 class="portfolio__tittle">Портфоліо</h1>
-            <ul class="portfolio__filter filter">
-                <li class="filter__item">
-                    <input id="all" class="filter__input" name="filter-item" type="radio" value="all">
-                    <label for="all" class="filter__btn">Усі</label>
-                </li>
-                <li class="filter__item">
-                    <input id="webs" class="filter__input" name="filter-item" type="radio" value="webs">
-                    <label for="webs" class="filter__btn">Веб-сайти</label>
-                </li>
-                <li class="filter__item">
-                    <input id="applications" class="filter__input" name="filter-item" type="radio" value="applications">
-                    <label for="applications" class="filter__btn">Додатки</label>
-                </li>
-                <li class="filter__item">
-                    <input id="design" class="filter__input" name="filter-item" type="radio" value="design">
-                    <label for="design" class="filter__btn">Дизайн</label>
-                </li>
-                <li class="filter__item">
-                    <input id="marketing" class="filter__input" name="filter-item" type="radio" value="marketing">
-                    <label for="marketing" class="filter__btn">Маркетинг</label>
-                </li>
-            </ul>
-
-            <ul class="portfolio__set">
-                <li class="portfolio__item project"> 
-                    <div class="hidden-thumb">
-                      <img class="project__img" src="./imges/technokryak.jpg" width="370"
-                       alt="Ноутбук з зображенням відкритої сторінки веб-сайту Технокряк">
-                      <p class="project__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
-                        дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
-                    </div>
-                    <h2 class="project__tittle">Технокряк</h2>
-                    <p class="project__class">Веб-сайт</p>
-                </li>
-                <li class="portfolio__item project">
-                    <div class="hidden-thumb">
-                        <img class="project__img" src="./imges/neworlean.jpg" width="370"
-                            alt="Постер New Orlean vs Golden Star">
-                        <p class="project__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
-                            Все це
-                            дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
-                    </div>
-                    <h2 class="project__tittle">Постер New Orlean vs Golden Star</h2>
-                    <p class="project__class">Дизайн</p>
-                </li>
-                <li class="portfolio__item project">
-                    <div class="hidden-thumb">
-                        <img class="project__img" src="./imges/seafood.jpg" width="370" alt="Емблема ресторану Seafood">
-                        <p class="project__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
-                            Все це
-                            дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
-                    </div>
-                    <h2 class="project__tittle">Ресторан Seafood</h2>
-                    <p class="project__class">Додаток</p>
-                </li>
-                <li class="portfolio__item project">
-                    <div class="hidden-thumb">
-                        <img class="project__img" src="./imges/prime.jpg" width="370" alt="Зображення з накладними навушниками">
-                        <p class="project__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
-                            Все це
-                            дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
-                    </div>
-                    <h2 class="project__tittle">Проєкт Prime</h2>
-                    <p class="project__class">Маркетинг</p>
-                </li>
-                <li class="portfolio__item project">
-                    <div class="hidden-thumb">
-                        <img class="project__img" src="./imges/boxes.jpg" width="370" alt="Зображення з двома коробками">
-                        <p class="project__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
-                            Все це
-                            дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
-                    </div>
-                    <h2 class="project__tittle">Проєкт Boxes</h2>
-                    <p class="project__class">Додаток</p>
-                </li>
-                <li class="portfolio__item project">
-                    <div class="hidden-thumb">
-                        <img class="project__img" src="./imges/inspiration.jpg" width="370" alt="Монітор із зображенням відкритої сторінки веб-сайту Inspiration has no Borders">
-                        <p class="project__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi hic tenetur necessitatibus earum rem sequi, accusamus, placeat totam harum magni repellat? Dignissimos officiis sit ab autem accusantium officia ipsa quasi?</p>
-                    </div>
-                    <h2 class="project__tittle">Inspiration has no Borders</h2>
-                    <p class="project__class">Веб-сайт</p>
-                </li>
-                <li class="portfolio__item project">
-                    <div class="hidden-thumb">
-                        <img class="project__img" src="./imges/limitededition.jpg" width="370"
-                            alt="Зображення розгорнутої книги">
-                        <p class="project__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi hic tenetur
-                            necessitatibus earum rem sequi, accusamus, placeat totam harum magni repellat? Dignissimos officiis sit ab
-                            autem accusantium officia ipsa quasi?</p>
-                    </div>
-                    <h2 class="project__tittle">Видання Limited Edition</h2>
-                    <p class="project__class">Дизайн</p>
-                </li>
-                <li class="portfolio__item project">
-                    <div class="hidden-thumb">
-                        <img class="project__img" src="./imges/lab.jpg" width="370" alt="Емблема LAB">
-                        <p class="project__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi hic tenetur
-                            necessitatibus earum rem sequi, accusamus, placeat totam harum magni repellat? Dignissimos officiis sit ab
-                            autem accusantium officia ipsa quasi?</p>
-                    </div>
-                    <h2 class="project__tittle">Проєкт LAB</h2>
-                    <p class="project__class">Маркетинг</p>
-                </li>
-                <li class="portfolio__item project">
-                    <div class="hidden-thumb">
-                        <img class="project__img" src="./imges/growingbusiness.jpg" width="370" alt="Ноутбук з зображенням відкритого додатку Growing Business">
-                        <p class="project__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi hic tenetur
-                            necessitatibus earum rem sequi, accusamus, placeat totam harum magni repellat? Dignissimos officiis sit ab
-                            autem accusantium officia ipsa quasi?</p>
-                    </div>
-                    <h2 class="project__tittle">Growing Business</h2>
-                    <p class="project__class">Додаток</p>
-                </li>
-
-            </ul>
-
-        </section>
-    </main>
-
-    <!-- Підвал -->
-    
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="contacts">
-                <a href="./index.html" class="logo logo--light"><span>Web</span>Studio</a>
-                <address>
-                    <ul class="contacts__set">
-                        <li class="contact__item">
-                            <a class="contact__link adress" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
-                                rel="noopener noreferrer nofollow">
-                                м. Київ, пр-т Лесі Украінки, 26
-                            </a>
-                        </li>
-                        <li class="contact__item">
-                            <a href="mailto:info@devstudio.com" class="contact__link">info@devstudio.com</a>
-                        </li>
-                        <li class="contact__item">
-                            <a href="telto:+380961111111" class="contact__link">+38 096 111 11 11</a>
-                        </li>
-                    </ul>
-                </address>
-            </div>
-    
-            <div class="invitation">
-                <h3 class="invitation__tittle footer-tittles">Приєднуйтесь</h3>
-                <ul class="messengers invitation__messengers">
-                    <li class="messengers__item">
-                        <a href="/" class="messengers__link invitation__link" aria-label="Інстаграм">
-                            <svg class="messengers__icon">
-                                <use xlink:href="./imges/sprite.svg#instagram" width="20" height="20"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="messengers__item">
-                        <a href="/" class="messengers__link invitation__link" aria-label="Твітер">
-                            <svg class="messengers__icon">
-                                <use xlink:href="./imges/sprite.svg#twitter" width="20" height="20"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="messengers__item">
-                        <a href="/" class="messengers__link invitation__link" aria-label="Фейсбук">
-                            <svg class="messengers__icon">
-                                <use xlink:href="./imges/sprite.svg#facebook" width="20" height="20"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="messengers__item">
-                        <a href="/" class="messengers__link invitation__link" aria-label="Лінкедін">
-                            <svg class="messengers__icon">
-                                <use xlink:href="./imges/sprite.svg#linkedin" width="20" height="20"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-    
-            <div class="sighn-up">
-                <h3 class="sighn-up__tittle footer-tittles">Підпишіться на розсилку</h3>
-    
-                <div class="sighn-up__form">
-                    <label class="sighn-up__lable">
-                        <input class="sighn-up__input" type="email" placeholder="E-mail">
-                    </label>
-                    <button type="submit" class="sighn-up__button">
-                        Підписатися
-                        <svg class="sighn-up__icon">
-                            <use href="./imges/sprite.svg#paper-plane"></use>
-                        </svg>
-                    </button>
-                </div>
-    
-            </div>
-    
-        </div>
-    </footer>
-
-</body>
+      })();
+    </script>
+  </body>
+</html>
