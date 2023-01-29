@@ -10,19 +10,57 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../imges/hero_overlay.jpg);
+    url(/imges/hero-phone-1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
+  @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx)
+  {
+    background-image: linear-gradient(to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)),
+        url(/imges/hero-phone-2x.jpg);
+  }
+
   @media screen and (min-width: 768px) {
     height: 400px;
     max-width: 768px;
+
+    background-image: linear-gradient(to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)),
+        url(/imges/hero-tablet-1x.jpg);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+          background-image: linear-gradient(to right,
+              rgba(47, 48, 58, 0.4),
+              rgba(47, 48, 58, 0.4)),
+            url(/imges/hero-tablet-2x.jpg);
+        }
   }
 
   @media screen and (min-width: 1600px) {
     height: 600px;
     max-width: 1600px;
+
+    background-image: linear-gradient(to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)),
+        url(/imges/hero-widescreen-1x.jpg);
+
+        @media screen and (min-device-pixel-ratio: 2),
+          screen and (min-resolution: 192dpi),
+          screen and (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+              url(/imges/hero-widescreen-2x.jpg);
+          }
   }
 
   .container {
