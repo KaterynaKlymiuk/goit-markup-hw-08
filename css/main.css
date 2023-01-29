@@ -627,7 +627,7 @@ a {
 
 .team__thumb {
   height: 622px;
-  width: calc(100% - 30px);
+  width: 100%;
   background-color: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -637,7 +637,7 @@ a {
 @media (min-width: 768px) {
   .team__thumb {
     height: 536px;
-    width: calc((100% - 60px) / 2);
+    width: calc((100% - 30px) / 2);
   }
   .team__thumb:nth-last-child(2) {
     margin-bottom: 0;
@@ -647,7 +647,7 @@ a {
   .team__thumb {
     margin: 0;
     height: 428px;
-    width: calc((100% - 120px) / 4);
+    width: calc((100% - 90px) / 4);
   }
   .team__thumb:nth-last-child(n) {
     margin-bottom: 0;
@@ -663,13 +663,13 @@ a {
 }
 @media (min-width: 768px) {
   .team__img {
-    width: 354px;
+    width: 100%;
     height: 374px;
   }
 }
 @media (min-width: 1600px) {
   .team__img {
-    width: 270px;
+    width: 100%;
     height: 260px;
   }
 }
@@ -695,19 +695,11 @@ a {
 
 .messengers {
   display: flex;
-  padding: 0 122px;
-  width: 100%;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 206px;
   justify-content: space-between;
-}
-@media screen and (min-width: 768px) {
-  .messengers {
-    padding: 0 74px;
-  }
-}
-@media screen and (min-width: 1600px) {
-  .messengers {
-    padding: 0 32px;
-  }
 }
 
 .messengers__item {
@@ -941,13 +933,18 @@ a {
   margin-left: auto;
   margin-right: auto;
   padding: 15px 16px;
-  width: 358px;
+  max-width: 358px;
   height: 50px;
   color: #fff;
   background-color: rgb(47, 48, 58);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+@media screen and (min-width: 480px) {
+  .sighn-up__input {
+    width: 358px;
+  }
 }
 @media screen and (min-width: 1600px) {
   .sighn-up__input {
