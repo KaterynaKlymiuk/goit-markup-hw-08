@@ -157,12 +157,18 @@
         <ul class="portfolio__set">
           <li class="portfolio__item project">
             <div class="hidden-thumb">
-              <img
-                class="project__img"
-                src="./imges/technokryak.jpg"
-                width="370"
-                alt="Ноутбук з зображенням відкритої сторінки веб-сайту Технокряк"
-              />
+              <picture>
+                <source srcset="./imges/technokryak-phone-1x.jpg 1x, ./imges/technokryak-phone-2x.jpg 2x" 
+                media="(max-width: 479px)">
+                <source srcset="./imges/technokryak-tablet-1x.jpg 1x, ./imges/technokryak-tablet-2x.jpg 2x" 
+                media="(min-width: 480px)">
+                <source srcset="./imges/technokryak-widescreen-1x.jpg 1x, ./imges/technokryak-widescreen-2x.jpg 2x" 
+                media="(min-width: 768px)">
+              <img class="project__img" 
+                src="./imges/technokryak-phone-1x.jpg"
+                alt="Ноутбук з зображенням відкритої сторінки веб-сайту Технокряк" width="340"/>
+              </picture>
+
               <p class="project__description">
                 Ресурс пропонує комплексні пропозиції з різним рівнем
                 функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -177,7 +183,7 @@
               <img
                 class="project__img"
                 src="./imges/neworlean.jpg"
-                width="370"
+
                 alt="Постер New Orlean vs Golden Star"
               />
               <p class="project__description">
@@ -194,7 +200,7 @@
               <img
                 class="project__img"
                 src="./imges/seafood.jpg"
-                width="370"
+
                 alt="Емблема ресторану Seafood"
               />
               <p class="project__description">
@@ -211,7 +217,7 @@
               <img
                 class="project__img"
                 src="./imges/prime.jpg"
-                width="370"
+
                 alt="Зображення з накладними навушниками"
               />
               <p class="project__description">
@@ -228,7 +234,7 @@
               <img
                 class="project__img"
                 src="./imges/boxes.jpg"
-                width="370"
+
                 alt="Зображення з двома коробками"
               />
               <p class="project__description">
@@ -245,7 +251,7 @@
               <img
                 class="project__img"
                 src="./imges/inspiration.jpg"
-                width="370"
+
                 alt="Монітор із зображенням відкритої сторінки веб-сайту Inspiration has no Borders"
               />
               <p class="project__description">
@@ -263,7 +269,7 @@
               <img
                 class="project__img"
                 src="./imges/limitededition.jpg"
-                width="370"
+
                 alt="Зображення розгорнутої книги"
               />
               <p class="project__description">
@@ -281,7 +287,7 @@
               <img
                 class="project__img"
                 src="./imges/lab.jpg"
-                width="370"
+
                 alt="Емблема LAB"
               />
               <p class="project__description">
@@ -299,7 +305,7 @@
               <img
                 class="project__img"
                 src="./imges/growingbusiness.jpg"
-                width="370"
+
                 alt="Ноутбук з зображенням відкритого додатку Growing Business"
               />
               <p class="project__description">

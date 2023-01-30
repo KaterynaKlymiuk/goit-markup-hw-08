@@ -80,7 +80,7 @@
 }
 
 .portfolio__item {
-  width: 450px;
+  max-width: 450px;
   height: 404px;
 
   margin-bottom: 30px;
@@ -90,6 +90,12 @@
 
   &:last-child {
     margin-bottom: 0px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: none;
+    width: 450px;
+    height: 404px;
   }
 
   @media screen and (min-width: 768px) {
@@ -120,7 +126,7 @@
 .hidden-thumb {
   position: relative;
   height: 294px;
-  width: 450px;
+  width: 100%;
   overflow: hidden;
 
   @media screen and (min-width: 768px) {
@@ -134,7 +140,7 @@
 
 .project__img {
   display: block;
-  width: 450px;
+  // max-width: 450px;
   height: 294px;
 
   object-fit: cover;

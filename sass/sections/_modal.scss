@@ -14,8 +14,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 450px;
-  height: 609px;
+  max-width: 450px;
+  min-height: 609px;
   padding: 40px;
 
   background-color: $lightBackground;
@@ -25,6 +25,8 @@
   border-radius: 4px;
 
   @media screen and (min-width: 1600px) {
+    max-width: none;
+    max-height: none;
     width: 528px;
     height: 581px;
   }
